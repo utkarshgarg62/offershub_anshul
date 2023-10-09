@@ -4,10 +4,10 @@ const file = require('./urls.json');
 async function redirect() {
   let array = [];
   for (let ele of file) {
-    let response = await fetch(ele.url);
+    let response = await fetch(ele["﻿url"]);
     response = await response.json();
     let obj = {
-      url: ele.url,
+      url: ele["﻿url"],
       status: response.status,
       message: response.message,
     };
